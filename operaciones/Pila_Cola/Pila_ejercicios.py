@@ -4,7 +4,6 @@
 # que aparecen en ambos episodios.
 
 from pila import Stack
-from random import randint
 
 pila_aux = Stack()
 epV = Stack()

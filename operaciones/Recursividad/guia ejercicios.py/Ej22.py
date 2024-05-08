@@ -10,35 +10,24 @@
 # para encontrarlo,
 
 # c. Utilizar un vector para representar la mochila.
-mochila = ['taza con diseño de Yoda', 'sable de luz', 'libro de Star Wars', 'remera con el logo de Star Wars']
+
 def usar_la_fuerza(mochila, indice=0, objetos_sacados=0):
     if indice >= len(mochila):
         return None, objetos_sacados
 
-objeto_actual = mochila[indice]
-
-
-
-def usar_la_fuerza(mochila, indice=0, objetos_extraidos=0):
-    # Caso base: si el índice supera la longitud de la mochila, o ya encontramos un sable de luz.
-    if indice >= len(mochila):
-        return None, objetos_extraidos
-    
-    # Obtenemos el objeto en el índice actual de la mochila.
     objeto_actual = mochila[indice]
     
-    # Si el objeto actual es un sable de luz, retornamos su índice y la cantidad de objetos extraídos.
     if objeto_actual == "sable de luz":
-        return indice, objetos_extraidos
+        return indice, objetos_sacados
     
-    # Caso recursivo: seguimos buscando en los objetos restantes de la mochila.
-    return usar_la_fuerza(mochila, indice + 1, objetos_extraidos + 1)
+    return usar_la_fuerza(mochila, indice + 1, objetos_sacados + 1)
 
-# Ejemplo de uso:
-mochila = ["comida", "ropa", "herramientas", "sable de luz", "libro", "botiquín"]
-indice_sable, objetos_extraidos = usar_la_fuerza(mochila)
-if indice_sable is not None:
-    print("Se encontró un sable de luz en la posición", indice_sable)
-    print("Se necesitaron sacar", objetos_extraidos, "objetos para encontrarlo.")
-else:
+mochila = ['taza con diseño de Yoda', 'sable de luz', 'libro de Star Wars', 'remera con el logo de Star Wars']
+
+indice_sable, objetos_sacados = usar_la_fuerza(mochila)
+
+if indice_sable is None:
     print("No se encontró ningún sable de luz en la mochila.")
+else:
+    print("Se encontró un sable de luz en la posición", indice_sable)
+    print("Se necesitaron sacar", objetos_sacados, "objetos para encontrarlo.")
