@@ -158,5 +158,3 @@ personajes_cdg = personajes_nombres_CDG(pila_personajes)
 print("Personajes cuyos nombres empiezan con C, D y G:")
 for personaje in personajes_cdg:
     print(f"{personaje['nombre']} participó en {personaje['peliculas']} películas")
-
-print('hola men')
