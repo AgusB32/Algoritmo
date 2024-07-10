@@ -4,7 +4,7 @@ def fibonacci(num):
         return num
     else:
         return fibonacci(num-1) + fibonacci(num-2)
-    
+
 num = int(input("Ingrese el valor que desea ser trabajado por Fibonacci: "))
 res = fibonacci(num)
-print(f"El resultado del valor trabajado por Fibonacci es: {res}")
+print(f"El resultado del valor trabajado por Fibonazi es: {res}")
